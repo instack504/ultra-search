@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-2"></div>
-                <div class="col-8 text-center mt-5 p-5">
+                <div class="col-8 text-center mt-5 p-5 textup">
                     <a href="/" class="btn">
                         <h1 class="text-monospace text-uppercase mt-5 text-primary">Ultra <span class="text-success">Search</span></h1>
                     </a>
@@ -27,10 +27,12 @@
             <div class="row">
                 <div class="col-2"></div>
                 <div class="col-8">
-                    <form action="">
+                    <form action="/process" method="POST">
                       <div class="input-group card-body shadow rounded p-1">
                         <input type="search" name="q" placeholder="Search" class="form-control border-0 rounded">
-                        <div class="input-group-btn"><button class="btn btn-link text-dark"><i class="fa fa-search"></i></button></div>
+                        <div class="input-group-btn"><button class="btn btn-link text-dark" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button></div>
                       </div>  
                     </form>
                     
@@ -38,5 +40,17 @@
             </div>
         </div>
     </section>
+    <script>
+        document.cookie = `userAgent = navigator.userAgent`;
+    </script>
+    <style>
+        @media only screen and (min-width:150px) and (max-width:640px){
+            .textup{
+                text-align: center;
+                width: 100%;
+                transform: translateX(-25%);
+            }
+        }
+    </style>
 </body>
 </html>
